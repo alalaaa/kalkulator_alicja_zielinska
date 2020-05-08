@@ -1,0 +1,48 @@
+<html>
+<head>
+
+<script>
+function oblicz(operator) 
+{
+    var a2 = document.getElementById('a').value;
+    var b2 = document.getElementById('b').value; 
+	
+
+ 
+    switch(operator) 
+    {
+        case '+':
+            var wynik = parseFloat(a2) + parseFloat(b2);         
+        break;  
+        case '-':
+            var wynik = parseFloat(a2) - parseFloat(b2);         
+        break;  
+        case '*':
+            var wynik = parseFloat(a2) * parseFloat(b2);         
+        break; 
+        case':':
+            var wynik = parseFloat(a2) / parseFloat(b2);  
+        break; 
+    }
+ 
+    document.getElementById('wynik').value = wynik;
+}
+</script>
+</head>
+<body>
+<form id="oblicz">
+    Podaj liczby:
+    <input type="text" id="a"  />
+    
+    <input type="text" id="b"  />
+    <br>
+     
+    <button type="button" onclick="oblicz(this.innerHTML)">+</button> 
+    <button type="button" onclick="oblicz(this.innerHTML)">-</button>   
+    <button type="button" onclick="oblicz(this.innerHTML)">*</button>
+    <button type="button" onclick="oblicz(this.innerHTML)">:</button>
+    <br>
+    Wynik: <input type="text" id="wynik"   />
+</form>
+</body>
+</html>
